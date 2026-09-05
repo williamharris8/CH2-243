@@ -1,2 +1,1 @@
-# Journal
-Write your Journal questions and notes here.
+PHASE 1 - Similar to using MS Word. If we are trying to backtrack with an undo button, we want the last input at the top of the stack. FIFO would be more useful in the instance of a to do list.
