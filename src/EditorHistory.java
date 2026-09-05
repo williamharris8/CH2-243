@@ -23,4 +23,8 @@ public class EditorHistory {
         undoStack.push(currentState);
         currentState = redoStack.pop();
     }
+
+    public String currentStatus() {
+        return currentState;
+    }
 }

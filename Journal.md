@@ -3,3 +3,5 @@ PHASE 1 - Similar to using MS Word. If we are trying to backtrack with an undo b
 PHASE 2 - Handling this using return will exit the method early before reaching the pop line. Without it will throw EmptyStackException and crash.
 
 PHASE 3 - redoStack is holding what is undid if it's wanted back. If you undo something and then type something new, what is in the redo stack no longer belongs anymore. If that wasnt cleared pressing redo would swap the text you just typed for the old version.
+
+PHASE 4 - Step 1: current becomes "uno" and old current "" moves onto undoStack and redo stays []. Step 2: current becomes "uno dos" and "uno" moves into undoStack redo stays []. Step 3: current becomes "uno dos tres" with undoStack "uno dos" redo again []. Step 4: current goes back to "uno dos" undoStack loses "uno dos" and redo "uno dos tres". Step 5: current goes back to "uno" and undoStack becomes "" redo gained "uno dos" on top of "uno dos tres". Step 6: current becomes "uno dos", redo "uno dos tres", undo "uno". Step 7: makeChange so current is now "uno dos adios", "uno dos" for undoStack, redoStack is cleared. Step 8: redo on an empty stack is caught.
